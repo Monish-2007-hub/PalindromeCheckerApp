@@ -6,8 +6,29 @@ import java.util.ArrayDeque;
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
+        showWelcome();   // UC1
         checkHardcodedPalindrome();  // UC2
+        reverseBasedPalindromeCheck(); // UC3
+        characterArrayPalindromeCheck();   // UC4
+        stackBasedPalindromeCheck();   // UC5
+        queueStackPalindromeCheck();   // UC6
+        dequePalindromeCheck();   // UC7
+        linkedListPalindromeCheck();   // UC8
+        recursivePalindromeCheck();   // UC9
     }
+
+    // UC1: Welcome Message
+    public static void showWelcome() {
+        // Display welcome message
+        System.out.println("welcome to the Palindrome Checker Management System");
+
+        // Display version
+        System.out.println("Version: 1.0");
+
+        // Continue to next use case (placeholder)
+        System.out.println("System initialized successfully.");
+    }
+
     // UC2: Hardcoded Palindrome Check
     public static void checkHardcodedPalindrome() {
 
