@@ -16,7 +16,7 @@ public class PalindromeCheckerApp {
                 break;
             }
         }
-
+        System.out.println("UC2");
         System.out.println("Input text: " + input);
         System.out.println("Is it a Palindrome? : " + isPalindrome);
     }
