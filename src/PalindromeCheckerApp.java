@@ -8,13 +8,28 @@ public class PalindromeCheckerApp {
 
         String input = "level";
 
-        PalindromeStrategy strategy = new StackStrategy();
-        // PalindromeStrategy strategy = new DequeStrategy();
+        PalindromeStrategy stackStrategy = new StackStrategy();
+        PalindromeStrategy dequeStrategy = new DequeStrategy();
 
-        boolean result = strategy.check(input);
+        long start1 = System.nanoTime();
+        boolean result1 = stackStrategy.check(input);
+        long end1 = System.nanoTime();
+        long duration1 = end1 - start1;
+
+        long start2 = System.nanoTime();
+        boolean result2 = dequeStrategy.check(input);
+        long end2 = System.nanoTime();
+        long duration2 = end2 - start2;
 
         System.out.println("Input : " + input);
-        System.out.println("Is Palindrome? : " + result);
+
+        System.out.println("Stack Strategy Result : " + result1);
+        System.out.println("Execution Time (Stack) : " + duration1 + " ns");
+
+        System.out.println();
+
+        System.out.println("Deque Strategy Result : " + result2);
+        System.out.println("Execution Time (Deque) : " + duration2 + " ns");
     }
 }
 
